@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>vue</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <div id="ejemplo1">
+
+        <input type="text" v-bind:value="valorBind">
+        <!-- v-bind: es una directiva de vue que permite enlazar un atributo de un elemento html con una variable de vue -->
+        <p>{{ valorBind }}</p>
+
+        <p>Doble binding </p>
+
+        <input type="text" v-model="valorModel">
+        <!-- v-model: es una directiva de vue que permite enlazar un atributo de un elemento html con una variable de vue -->
+
+        <p>{{ valorModel }}</p>
+
+    </div>
+
+
+    <div id="ejemplo2">
+        <h2>Estudiante</h2>
+
+        <ul>
+            <li>Nombre: {{nombre}}</li>
+            <li>Apellido: {{apellido}}</li>
+            <li>Edad: {{edad}}</li>
+        </ul>
+
+        <pre>Presentacion: {{detalles()}}</pre>
+    </div>
+
+    <div id="ejemplo3">
+        <h2>Estudiante</h2>
+
+        <ul>
+            <li>Nombre: {{nombre}}</li>
+            <li>Apellido: {{apellido}}</li>
+        </ul>
+
+        <div v-html="contenidoHTML"></div>
+        <img v-bind:src="imagenSrc" v-bind:alt="imagenAlt" v-bind:title="imagenTitle">
+    </div>
+
+
+    <div id="ejemplo4">
+
+        <custom-component-nuestra-etiqueta></custom-component-nuestra-etiqueta>
+
+    </div>
+
+    <div id="ejemplo5">
+
+        <custom-component-two></custom-component-two>
+
+    <div></div>
+
+
+    <div id="app">
+        <button @click="count++">
+          Count is: {{ count }}
+        </button>
+      </div>
+
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <script src="vue.js"></script>
+</body>
+
+</html>

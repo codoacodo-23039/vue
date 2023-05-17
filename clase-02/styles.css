@@ -1,0 +1,13 @@
+.titulo{
+    color: red;
+    font-size: 50px;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.cajita{
+    width: 200px;
+    height: 200px;
+    background-color: blue;
+    border: 1px solid black;
+}
